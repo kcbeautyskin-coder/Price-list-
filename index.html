@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KC.BEAUTYSKIN｜Treatment Price List</title>
+  <style>
+    :root {
+      --bg: #F7F3EE;
+      --card: #FFFDF9;
+      --accent: #B88B68;
+      --accent-dark: #8E6446;
+      --text: #3D312A;
+      --muted: #7A695E;
+      --border: #E8DDD2;
+      --badge-bg: #F3EAE1;
+      --promo-bg: #EFE3D7;
+      --sheet-max: 440px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      padding-bottom: 92px;
+    }
+
+    .topbar {
+      width: 100%;
+      max-width: var(--sheet-max);
+      margin: 0 auto;
+      background-color: var(--promo-bg);
+      color: var(--text);
+      text-align: center;
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--sheet-max);
+      margin: 0 auto;
+      padding: 14px 12px 0;
+    }
+
+    .hero {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 16px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .brand {
+      font-size: 0.85rem;
+      letter-spacing: 0.16em;
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .discounts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .pill {
+      background-color: var(--badge-bg);
+      color: var(--accent-dark);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-dark);
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .filter-btn {
+      background-color: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .filter-btn.active {
+      background-color: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .section-card {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px 14px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 9px 6px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.76rem;
+      white-space: nowrap;
+    }
+
+    .item-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .item-sub {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .note-box {
+      margin-top: 10px;
+      background-color: var(--bg);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .note-box p + p {
+      margin-top: 4px;
+    }
+
+    .info-list {
+      padding-left: 16px;
+      font-size: 0.83rem;
+    }
+
+    .info-list li + li {
+      margin-top: 7px;
+    }
+
+    .floating-wa-wrap {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 14px;
+      width: 100%;
+      max-width: var(--sheet-max);
+      margin: 0 auto;
+      padding: 0 12px;
+      display: flex;
+      justify-content: flex-end;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    .floating-wa {
+      pointer-events: auto;
+      background-color: #25D366;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.84rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    7D水光零瑕針新登場・價錢不變｜3次套票93折（5個月內有效・限本人使用・不可共用或轉讓）
+  </div>
+
+  <div class="container">
+    <header class="hero">
+      <div class="brand">KC.BEAUTYSKIN</div>
+      <h1>Treatment Price List</h1>
+      <p class="meta">MON–SUN 11:00–20:00｜APPOINTMENT ONLY｜11年美容資歷｜單次收費｜不推銷</p>
+      <div class="discounts">
+        <span class="pill">3次套票 93折</span>
+        <span class="pill">學生優惠 95折</span>
+        <span class="pill">生日月優惠 9折</span>
+      </div>
+      <a class="btn-primary" href="https://wa.me/85256204060?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%2F%E9%A0%90%E7%B4%84%20KC.BEAUTYSKIN%20%E7%99%82%E7%A8%8B" target="_blank" rel="noopener">
+        WhatsApp 預約 5620 4060
+      </a>
+    </header>
+
+    <nav class="filter-bar" aria-label="療程分類">
+      <button class="filter-btn active" data-category="all">全部項目</button>
+      <button class="filter-btn" data-category="facial">面部護理</button>
+      <button class="filter-btn" data-category="cell">細胞機 &amp; 醫美精華</button>
+      <button class="filter-btn" data-category="eye">眼部 / 美睫 / 附加</button>
+      <button class="filter-btn" data-category="hifu">Agafar HIFU</button>
+      <button class="filter-btn" data-category="pico">Pico 皮秒激光</button>
+      <button class="filter-btn" data-category="einxel-back">Einxel Plus 女神槍 &amp; 背部護理</button>
+      <button class="filter-btn" data-category="notice">預約須知 &amp; 天氣</button>
+    </nav>
+
+    <section class="section-card" data-category="facial">
+      <h2 class="section-title">面部護理</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>療程項目</th>
+              <th>單次正價</th>
+              <th>3次</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="item-name">D-Cool保濕護理</span><span class="item-sub">保濕/抗敏/鎮靜</span></td>
+              <td>$480</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Aqua Peel水磨護理</span><span class="item-sub">深層清潔/軟化角質/保濕</span></td>
+              <td>$550</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">O2注氧活肌護理</span><span class="item-sub">改善暗啞泛黃/乾燥泛紅</span></td>
+              <td>$550</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">OMEGA抗痘護理</span><span class="item-sub">改善暗瘡/消炎/調節水油平衡</span></td>
+              <td>$580</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">奶滑肌果酸護理</span><span class="item-sub">改善暗粒/暗瘡/去印/膚色不均</span></td>
+              <td>$628</td>
+              <td>$1750</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">白雪公主透白護理</span><span class="item-sub">抑制黑色素/改善暗啞/美白</span></td>
+              <td>$680</td>
+              <td>$1880</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">CIVASAN水光炸彈</span><span class="item-sub">強效鎖水/鎮靜修復/回復彈性</span></td>
+              <td>$680</td>
+              <td>$1880</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">微電流逆齡再生護理</span><span class="item-sub">刺激面部肌肉/塑造輪廓/消除水腫</span></td>
+              <td>$680</td>
+              <td>$1880</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">
+        <p>包含全面鉗針清｜修眉｜導入機｜面膜</p>
+        <p>可額外配加高效精華 +$150｜如需轉退紅面膜 +$20</p>
+      </div>
+    </section>
+
+    <section class="section-card" data-category="cell">
+      <h2 class="section-title">細胞機 &amp; 醫美精華</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>療程項目</th>
+              <th>試做價</th>
+              <th>單次正價</th>
+              <th>3次</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="item-name">細胞機護理 (1個模式)</span></td>
+              <td>/</td>
+              <td>$688</td>
+              <td>$1900</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">細胞機護理 (2個模式)</span></td>
+              <td>/</td>
+              <td>$800</td>
+              <td>$2230</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Exoxen外泌體</span><span class="item-sub">針對凹凸洞</span></td>
+              <td>$880</td>
+              <td>$1080</td>
+              <td>$2980</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">NAD+仙女針</span><span class="item-sub">細胞充電/緊致/抗衰老/細紋</span></td>
+              <td>$880</td>
+              <td>$1080</td>
+              <td>$2980</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">麗珠蘭三文魚</span><span class="item-sub">強化受損屏障/痘印/敏感</span></td>
+              <td>$880</td>
+              <td>$1080</td>
+              <td>$2980</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">東國水光透明質酸</span><span class="item-sub">深層補水/美白提亮/收毛孔</span></td>
+              <td>$880</td>
+              <td>$1080</td>
+              <td>$2980</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">7D水光零瑕針</span><span class="item-sub">聖誕新登場・價錢不變</span></td>
+              <td>$880</td>
+              <td>$1080</td>
+              <td>$2980</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">
+        <p>細胞機：修復受損細胞｜提高滲透性｜20種預設模式；精準改善敏感、暗瘡、濕疹及玫瑰痤瘡等肌膚問題；包含全面鉗針清｜修眉｜導入機｜面膜；可額外配加醫美精華 +$300｜高效精華 +$150</p>
+        <p>醫美精華：包含全面鉗針清｜修眉｜導入機｜面膜｜PDT光譜儀；導入機可選：納米種植機/細胞機</p>
+      </div>
+    </section>
+
+    <section class="section-card" data-category="eye">
+      <h2 class="section-title">眼部 / 美睫 / 附加項目</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>附加項目</th>
+              <th>單次正價</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="item-name">砭石眼部按摩</span><span class="item-sub">紓緩眼部疲勞/改善循環</span></td>
+              <td>+$168</td>
+              <td>$280</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">BIO亮眼提升</span><span class="item-sub">刺激眼周肌肉/浮腫/減淡黑眼圈</span></td>
+              <td>+$238</td>
+              <td>$380</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">EYE PANDA</span><span class="item-sub">減淡細紋/黑眼圈/色素沉澱</span></td>
+              <td>+$300</td>
+              <td>$428</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">HIFU眼</span><span class="item-sub">緊致眼周/改善眼袋/細紋/鬆弛</span></td>
+              <td>+$380</td>
+              <td>$498</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">CITE角蛋白美睫</span><span class="item-sub">使原生睫毛自然彎曲,放大雙眼</span></td>
+              <td>+$300</td>
+              <td>$428</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">消炎暗瘡電療</span></td>
+              <td>+$128</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Aqua Peel</span></td>
+              <td>+$180</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">D-Cool導入</span></td>
+              <td>+$200</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">暖頭導入</span></td>
+              <td>+$200</td>
+              <td>/</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">細胞機(1個模式)</span></td>
+              <td>+$280</td>
+              <td>/</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card" data-category="hifu">
+      <h2 class="section-title">Agafar HIFU</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>療程項目</th>
+              <th>試做價</th>
+              <th>單次正價</th>
+              <th>3次</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="item-name">Agafar HIFU (全面+眼)</span></td>
+              <td>$880</td>
+              <td>$1180</td>
+              <td>$3200</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Agafar HIFU (全面+眼+頸)</span></td>
+              <td>$1080</td>
+              <td>$1480</td>
+              <td>$4050</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Agafar HIFU+細胞機 (全面+眼)</span></td>
+              <td>$1080</td>
+              <td>$1480</td>
+              <td>$4050</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Agafar HIFU+細胞機 (全面+眼+頸)</span></td>
+              <td>$1280</td>
+              <td>$1680</td>
+              <td>$4550</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">
+        <p>MMFU 雙核心變層無痕技術：緊致面部輪廓｜提升蘋果肌｜消除雙下巴｜減淡頸紋；包含修眉｜鉗針清(局部鼻子)｜面膜</p>
+        <p>HIFU+細胞機：先做細胞機補充水份及活躍細胞因子｜後做HIFU提拉緊致輪廓；包含修眉｜鉗針清(局部鼻子)｜導入機｜面膜；可額外配加醫美水光精華 +$300｜高效精華 +$150</p>
+      </div>
+    </section>
+
+    <section class="section-card" data-category="pico">
+      <h2 class="section-title">Pico 皮秒激光</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>療程項目</th>
+              <th>試做價</th>
+              <th>單次正價</th>
+              <th>3次</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="item-name">Pico嫩膚去印療程</span><span class="item-sub">改善暗沉/痘印/皮膚粗糙</span></td>
+              <td>$880</td>
+              <td>$1180</td>
+              <td>$3200</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico皮脂控油療程</span><span class="item-sub">平衡油脂分泌/抗菌消炎</span></td>
+              <td>$880</td>
+              <td>$1180</td>
+              <td>$3200</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico全面去斑療程</span><span class="item-sub">雀斑/曬斑/荷爾蒙斑/老人斑/顴骨母斑/太田母斑</span></td>
+              <td>$980</td>
+              <td>$1280</td>
+              <td>$3550</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico點陣修復療程</span><span class="item-sub">改善毛孔粗大/凹凸洞問題</span></td>
+              <td>$1080</td>
+              <td>$1380</td>
+              <td>$3800</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico膠原緊致療程</span><span class="item-sub">膠原增生/減淡皺紋/緊致提拉</span></td>
+              <td>$1080</td>
+              <td>$1380</td>
+              <td>$3800</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico 身體色素 (細部位)</span><span class="item-sub">可選擇：腋下/乳暈/手肘/微笑線/膝頭/大脾內側/比基尼線/腳趾/腳背</span></td>
+              <td>/</td>
+              <td>$488</td>
+              <td>$1360</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico 身體色素 (大部位)</span><span class="item-sub">可選擇：上手臂/下手臂/大腿/小腿/上肚/下肚/臀部</span></td>
+              <td>/</td>
+              <td>$888</td>
+              <td>$2480</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">
+        <p>面部 Pico：不包含修眉及鉗針清；包含細胞機導入｜面膜；可額外配加醫美精華 +$300｜高效精華 +$150</p>
+      </div>
+    </section>
+
+    <section class="section-card" data-category="einxel-back">
+      <h2 class="section-title">Einxel Plus 女神槍 &amp; 背部護理</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>療程項目</th>
+              <th>試做價</th>
+              <th>單次正價</th>
+              <th>3次</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="item-name">Einxel Plus女神槍 (全面+眼)</span></td>
+              <td>$1388</td>
+              <td>$1788</td>
+              <td>$4980</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Einxel Plus女神槍 (全面+眼+頸)</span></td>
+              <td>$1588</td>
+              <td>$1988</td>
+              <td>$5400</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Aquapeel背部護理</span><span class="item-sub">深層清潔/去除老化角質</span></td>
+              <td>/</td>
+              <td>$680</td>
+              <td>$1800</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">奶滑肌果酸背部護理</span><span class="item-sub">疏通毛囊/改善暗瘡/淡印</span></td>
+              <td>/</td>
+              <td>$780</td>
+              <td>$2150</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico嫩膚去印背部護理</span><span class="item-sub">改善暗沉/痘印/粗糙/美白</span></td>
+              <td>$980</td>
+              <td>$1280</td>
+              <td>$3550</td>
+            </tr>
+            <tr>
+              <td><span class="item-name">Pico皮脂控油背部護理</span><span class="item-sub">平衡油脂分泌/抗菌消炎</span></td>
+              <td>$980</td>
+              <td>$1280</td>
+              <td>$3550</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">
+        <p>女神槍：Mode1 微針射頻（刺激膠原/收毛孔/凹凸洞/緊致/暗瘡印/皺紋）；Mode2 微針水光（精華100%吸收，達致韓式水光肌）；不包含修眉及鉗針清；包含全新一次性獨立針頭｜面膜｜PDT光譜儀；包含醫美水光精華｜可選配：Exoxen外泌體/仙女針/東國水光/麗珠蘭三文</p>
+        <p>Aquapeel / 奶滑肌果酸背部護理：包含鉗針清｜電療棒｜背膜</p>
+        <p>Pico 背部護理：不包含鉗針清；包含細胞機導入｜背膜</p>
+      </div>
+    </section>
+
+    <section class="section-card" data-category="notice">
+      <h2 class="section-title">BOOKING NOTICE 預約須知</h2>
+      <ul class="info-list">
+        <li>一人工作室，全預約制。不設口頭留位，需付HK$200訂金。訂金於當天療程中扣除，不設退款。</li>
+        <li>改期需提前24小時通知，限更改一次。即日預約客人不設更改時間。若因病需即日改期，必須提供醫生紙。</li>
+        <li>無故缺席或不足24小時前取消/改期，（且無法提供醫生紙）將被視為臨時取消。訂金一律不予退還。</li>
+        <li>為避免影響下一位顧客，請準時到達。遲到超過10分鐘，預約將會被取消。訂金不予退還，需重新預約並另付訂金。</li>
+      </ul>
+    </section>
+
+    <section class="section-card" data-category="notice">
+      <h2 class="section-title">惡劣天氣安排</h2>
+      <ul class="info-list">
+        <li>黃/紅雨及 1/3 號風球：照常營業。</li>
+        <li>黑雨或 8 號或以上風球：預約自動取消並另作安排；除下信號後 2 小時恢復營業（如 3pm 後除下則全日休息）。</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="floating-wa-wrap">
+    <a class="floating-wa" href="https://wa.me/85256204060?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%2F%E9%A0%90%E7%B4%84%20KC.BEAUTYSKIN%20%E7%99%82%E7%A8%8B" target="_blank" rel="noopener">
+      WhatsApp 預約
+    </a>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const sections = document.querySelectorAll('.section-card');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        buttons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        sections.forEach((sec) => {
+          if (category === 'all' || sec.dataset.category === category) {
+            sec.style.display = '';
+          } else {
+            sec.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
